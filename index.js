@@ -54,23 +54,24 @@ person.greet();
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const printNumbers = (listNumbers) => {
-    listNumbers.forEach(element => {
-        const printNumber = () => console.log("Número: ", element)
-        printNumber();
-    });
-}
+  listNumbers.forEach((element) => {
+    const printNumber = () => console.log("Número: ", element);
+    printNumber();
+  });
+};
 
-printNumbers(numbers)
+printNumbers(numbers);
 
 // ----- NIVELL 3 -----
-/** Exercici 5 
+/** Exercici 5
  * Funció de fletxa amb 'setTimeout': Crea una funció de fletxa que imprimeixi
  * un missatge a la consola després d'esperar 3 segons
  */
 
-const timeOut3000 = () =>  setTimeout(() =>{
-    console.log("Buenas tardes Luis!")
-}, 3000)
+const timeOut3000 = () =>
+  setTimeout(() => {
+    console.log("Buenas tardes Luis!");
+  }, 3000);
 
 timeOut3000();
 
@@ -79,30 +80,59 @@ timeOut3000();
 // NIVELL 1
 
 /** Exercici 1
- * Operador ternari bàsic: 
+ * Operador ternari bàsic:
  * Escriu una funció potConduir que accepti l'edat com a paràmetre i utilitzi l'operador
- * ternari per determinar si l'usuari pot conduir. Si l'edat és 18 o més, ha de retornar 
+ * ternari per determinar si l'usuari pot conduir. Si l'edat és 18 o més, ha de retornar
  * 'Pots conduir'. Si no, ha de retornar 'No pots conduir'.
  */
 const potCounduir = (edat) => {
-    return edat >= 18 ? 'Pots conduir' : "No pots conduir";
-}
+  return edat >= 18 ? "Pots conduir" : "No pots conduir";
+};
 let anys = 18;
 console.log(`Tinc ${anys} anys puc conduir: `, potCounduir(anys));
 anys = 17;
 console.log(`Tinc ${anys} anys puc conduir: `, potCounduir(anys));
 
 /** Exercici 2
- * Ús amb operadors de comparació: 
+ * Ús amb operadors de comparació:
  * Escriu una expressió que utilitzi l'operador ternari per determinar quin dels dos nombres
- * donats (num1 i num2) és més gran. Si num1 és més gran, retorna 'num1 és més gran'. 
+ * donats (num1 i num2) és més gran. Si num1 és més gran, retorna 'num1 és més gran'.
  * Si no, retorna 'num2 és més gran'.
  */
 
 const num1 = 45;
 const num2 = 56;
 const quinNombresEsMesGran = (num1, num2) => {
-    return num1 > num2 ? `Num 1 ${num1} és més gran` : `Num 2 ${num2} és més gran`;
-}
-console.log(quinNombresEsMesGran(45, 56))
+  return num1 > num2
+    ? `Num 1 ${num1} és més gran`
+    : `Num 2 ${num2} és més gran`;
+};
+console.log(quinNombresEsMesGran(45, 56));
 
+// NIVELL 2
+
+/** Exercici 3
+ * Ús enllaçat d'operadors ternaris:
+ * Escriu una expressió que utilitzi enllaços d'operadors ternaris per determinar
+ * si un número és positiu, negatiu o zero.
+ *
+ */
+const numPositiuNegatiuOZero = (num) =>
+  num === 0 ? "Cero" : num > 0 ? "Positiu" : "Negatiu";
+
+console.log("El nombre és", numPositiuNegatiuOZero(0));
+console.log("El nombre és", numPositiuNegatiuOZero(-1));
+console.log("El nombre és", numPositiuNegatiuOZero(1));
+
+/*
+ * Operador ternari amb funcions: Crea una funció trobarMaxim que accepti tres
+ * paràmetres (a, b, c) i utilitzi l'operador ternari per determinar el valor màxim.
+ */
+
+const trobarMaxim = (a, b, c) => {
+  const valorMaxim = (a > b) ? (a > c ? a : c) : (b > c ? b : c);
+  return valorMaxim;
+};
+
+const maxim = trobarMaxim(34, 25, 86);
+console.log(maxim);
