@@ -130,9 +130,9 @@ console.log("El nombre és", numPositiuNegatiuOZero(1));
  */
 
 const trobarMaxim = (a, b, c) => {
-  const valorMaxim = (a > b) ? (a > c ? a : c) : (b > c ? b : c);
+  const valorMaxim = a > b ? (a > c ? a : c) : b > c ? b : c;
   return valorMaxim;
 };
 
 const maxim = trobarMaxim(34, 25, 86);
-console.log(maxim);
+console.log('Nombre maxim es: ', maxim);
