@@ -12,7 +12,7 @@ const add  = (a, b) => {
 
 console.log("Suma de dos numeros: ", add(23, 20));
 
-/** Exercici 3
+/** Exercici 2
  * Funció de fletxa sense paràmetres: Crea una funció de fletxa anomenada 
  * randomNumber que no necessiti paràmetres i que retorni un número aleatori 
  * entre 0 i 100.
