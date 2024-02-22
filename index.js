@@ -62,4 +62,30 @@ const printNumbers = (listNumbers) => {
 
 printNumbers(numbers)
 
+// ----- NIVELL 3 -----
+/** Exercici 5 
+ * Funció de fletxa amb 'setTimeout': Crea una funció de fletxa que imprimeixi
+ * un missatge a la consola després d'esperar 3 segons
+ */
 
+const timeOut3000 = () =>  setTimeout(() =>{
+    console.log("Buenas tardes Luis!")
+}, 3000)
+
+timeOut3000();
+
+// Exercici 1.2: Operador ternari
+
+/** Exercici 1
+ * Operador ternari bàsic: 
+ * Escriu una funció potConduir que accepti l'edat com a paràmetre i utilitzi l'operador
+ * ternari per determinar si l'usuari pot conduir. Si l'edat és 18 o més, ha de retornar 
+ * 'Pots conduir'. Si no, ha de retornar 'No pots conduir'.
+ */
+const potCounduir = (edat) => {
+    return edat >= 18 ? 'Pots conduir' : "No pots conduir";
+}
+let anys = 18;
+console.log(`Tinc ${anys} anys puc conduir: `, potCounduir(anys));
+anys = 17;
+console.log(`Tinc ${anys} anys puc conduir: `, potCounduir(anys))
