@@ -221,8 +221,8 @@ const elements = ["a", "b", "c", "d"];
 
 const processarElements = (payload, callback) => {
   payload.forEach((element) => {
-    callback(element)
-  })
+    callback(element);
+  });
 };
 processarElements(elements, (element) => {
   console.log(element);
@@ -236,6 +236,15 @@ processarElements(elements, (element) => {
  * processarCadena ha de convertir la cadena a majúscules i llavors
  * invocar la funció de callback amb la cadena transformada.
  * */
+
+const processarCadena = (cadena, callback) => {
+  const mayuscules = cadena.toUpperCase();
+
+ callback(mayuscules);
+};
+processarCadena("Buenas noches Juan", (mayuscules) => {
+  console.log(mayuscules);
+});
 
 // ---> Exercici 1.4: Rest & Spread operators
 
