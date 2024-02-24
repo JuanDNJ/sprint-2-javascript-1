@@ -240,7 +240,7 @@ processarElements(elements, (element) => {
 const processarCadena = (cadena, callback) => {
   const mayuscules = cadena.toUpperCase();
 
- callback(mayuscules);
+  callback(mayuscules);
 };
 processarCadena("Buenas noches Juan", (mayuscules) => {
   console.log(mayuscules);
@@ -256,6 +256,14 @@ processarCadena("Buenas noches Juan", (mayuscules) => {
  * per a crear una tercera array que contingui tots els elements
  * de array1 i array2.
  * */
+
+const array1 = [1, 2, 3, 4, 5, 6, 7, 8];
+const array2 = ["1", "2", "3", "4", "5"];
+
+const newArray = [...array1, ...array2];
+
+console.log(newArray);
+
 /** Exercici 2
  * Operador Rest en Funcions:
  * Crea una funció 'suma' que utilitzi l'operador rest per a acceptar
