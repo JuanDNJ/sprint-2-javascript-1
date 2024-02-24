@@ -209,12 +209,24 @@ const esperarISaludar = (nom, callback) => {
 esperarISaludar("Juan Valdivia", (nom) => {
   console.log(`El meu nom és ${nom}`);
 });
+
 /** Exercici 4
  * Callbacks amb arrays:
  * Escriu una funció processarElements que accepti dos paràmetres:
  * un array i una funció de callback. La funció processarElements
  * ha d'invocar la funció de callback per cada element de l'array.
  * */
+
+const elements = ["a", "b", "c", "d"];
+
+const processarElements = (payload, callback) => {
+  payload.forEach((element) => {
+    callback(element)
+  })
+};
+processarElements(elements, (element) => {
+  console.log(element);
+});
 
 // NIVELL 3
 
