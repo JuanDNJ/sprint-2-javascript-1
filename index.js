@@ -135,4 +135,24 @@ const trobarMaxim = (a, b, c) => {
 };
 
 const maxim = trobarMaxim(34, 25, 86);
-console.log('Nombre maxim es: ', maxim);
+console.log("Nombre maxim es: ", maxim);
+
+// NIVELL 3
+
+/** Exercici 4
+ * Operador ternari dins un bucle:
+ * Escriu una funció parOImpar que accepti un array de números i utilitzi un bucle
+ * per a recórrer l'array. Dins del bucle, utilitza l'operador ternari per a determinar
+ * si cada número és parell o imparell.
+ */
+const listNumbers = [23,32,45,55,66,100,0,2,43];
+const parOImpar = (numbers) => {
+  numbers.forEach((number) => {
+    if(number % 2 === 0){
+      console.log(`El nombre ${number} és parell`)
+    }else{
+      console.log(`El nombre ${number} és imparell`)
+    }
+  });
+};
+parOImpar(listNumbers)
