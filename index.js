@@ -168,6 +168,13 @@ parOImpar(listNumbers);
  * la funció de callback, passant el nombre com a paràmetre.
  * */
 
+const processar = (nombre, callback) => {
+  return callback(nombre);
+};
+processar(12, (nombre) => {
+  console.log("El nombre es " + nombre);
+});
+
 /** Exercici 2
  * Callbacks amb operacions matemàtiques: Escriu una funció calculadora
  * que accepti tres paràmetres: dos nombres i una funció de callback.
@@ -175,6 +182,15 @@ parOImpar(listNumbers);
  * nombres com a paràmetres. Després, crida calculadora amb una funció
  * que faci la suma dels dos nombres.
  * */
+
+const calculadora = (nombre1, nombre2, callback) => {
+  return callback(nombre1, nombre2);
+};
+
+calculadora(23, 45, (nombre1, nombre2) => {
+  const suma = nombre1 + nombre2;
+  console.log(`Resultat de la suma ${nombre1} y ${nombre2} = ${suma}`);
+});
 
 // NIVELL 2
 
@@ -185,6 +201,14 @@ parOImpar(listNumbers);
  * llavors invocar la funció de callback, passant el nom com a paràmetre.
  * */
 
+const esperarISaludar = (nom, callback) => {
+  setTimeout(() => {
+    callback(nom);
+  }, 2000);
+};
+esperarISaludar("Juan Valdivia", (nom) => {
+  console.log(`El meu nom és ${nom}`);
+});
 /** Exercici 4
  * Callbacks amb arrays:
  * Escriu una funció processarElements que accepti dos paràmetres:
@@ -194,10 +218,10 @@ parOImpar(listNumbers);
 
 // NIVELL 3
 
-/** Exercici 5 
- * Escriu una funció processarCadena que accepti dos paràmetres: 
+/** Exercici 5
+ * Escriu una funció processarCadena que accepti dos paràmetres:
  * una cadena de caràcters i una funció de callback. La funció
- * processarCadena ha de convertir la cadena a majúscules i llavors 
+ * processarCadena ha de convertir la cadena a majúscules i llavors
  * invocar la funció de callback amb la cadena transformada.
  * */
 
@@ -205,45 +229,45 @@ parOImpar(listNumbers);
 
 // NIVELL 1
 
-/** Exercici 1 
- * Operador Spread en Arrays: 
- * Crea dues arrays, array1 i array2. Utilitza l'operador spread 
- * per a crear una tercera array que contingui tots els elements 
+/** Exercici 1
+ * Operador Spread en Arrays:
+ * Crea dues arrays, array1 i array2. Utilitza l'operador spread
+ * per a crear una tercera array que contingui tots els elements
  * de array1 i array2.
  * */
-/** Exercici 2 
- * Operador Rest en Funcions: 
- * Crea una funció 'suma' que utilitzi l'operador rest per a acceptar 
+/** Exercici 2
+ * Operador Rest en Funcions:
+ * Crea una funció 'suma' que utilitzi l'operador rest per a acceptar
  * un nombre indeterminat d'arguments i retornar la seva suma.
  * */
 
 // NIVELL 2
 
-/** Exercici 3 
- * Copiant objectes amb Spread: 
- * Crea un objecte 'objecte1'. Després crea un segon objecte, 'objecte2', 
- * que sigui una còpia de 'objecte1' utilitzant l'operador spread. 
+/** Exercici 3
+ * Copiant objectes amb Spread:
+ * Crea un objecte 'objecte1'. Després crea un segon objecte, 'objecte2',
+ * que sigui una còpia de 'objecte1' utilitzant l'operador spread.
  * Canvia una propietat de 'objecte2' i comprova que 'objecte1' no ha canviat.
  * */
 
-/** Exercici 4 
- * Rest en Destructuring: 
- * Crea una array amb diversos elements. Utilitza destructuring i l'operador 
- * rest per a assignar els primers dos elements a variables, i després assignar 
+/** Exercici 4
+ * Rest en Destructuring:
+ * Crea una array amb diversos elements. Utilitza destructuring i l'operador
+ * rest per a assignar els primers dos elements a variables, i després assignar
  * la resta dels elements a una tercera variable.
  * */
 
 // NIVELL 3
 
-/** Exercici 5 
- * Spread en Funcions: 
- * Crea una funció que accepti tres arguments. Després, crea una array amb tres 
+/** Exercici 5
+ * Spread en Funcions:
+ * Crea una funció que accepti tres arguments. Després, crea una array amb tres
  * elements i crida la funció utilitzant l'operador spread amb aquesta array.
  * */
 
-/** Exercici 6 
- * Fusionant Objectes amb Spread: 
- * Crea dos objectes amb propietats diferents. Utilitza l'operador spread 
+/** Exercici 6
+ * Fusionant Objectes amb Spread:
+ * Crea dos objectes amb propietats diferents. Utilitza l'operador spread
  * per a fusionar aquests dos objectes en un de nou.
  * */
 
@@ -251,31 +275,31 @@ parOImpar(listNumbers);
 
 // NIVELL 1
 
-/** Exercici 1 
- * Map: Teniu un array de números [1, 2, 3, 4]. 
+/** Exercici 1
+ * Map: Teniu un array de números [1, 2, 3, 4].
  * Crea una nova array que contingui el quadrat de cada número.
  * */
 
-/** Exercici 2 
- * Filter: Teniu una array de números [1, 2, 3, 4]. 
+/** Exercici 2
+ * Filter: Teniu una array de números [1, 2, 3, 4].
  * Crea una nova array que només contingui els números parells.
  * */
 
-/** Exercici 3 
- * Find: Teniu una array de números [1, 10 , 8, 11]. 
+/** Exercici 3
+ * Find: Teniu una array de números [1, 10 , 8, 11].
  * Utilitza la funció find per a trobar el primer número que és major a 10.
  * */
 
-/** Exercici 4 
- * Reduce: Teniu una array de números [13, 7, 8, 21]. 
+/** Exercici 4
+ * Reduce: Teniu una array de números [13, 7, 8, 21].
  * Fes servir la funció reduce per a calcular la suma total dels números.
  * */
 
 // NIVELL 2
 
-/** Exercici 5 
+/** Exercici 5
  * Donat un array "[ 1, 3, 7, 10 ,15, 17, 11, 5, 8, 12, 9 ]",
- * 
+ *
  * crea una funció en una sola línia que faci el següent:
  * - Filtra els nombres majors o iguals a 10.
  * - Multiplica cada nombre filtrat per 2.
@@ -285,9 +309,9 @@ parOImpar(listNumbers);
 
 // NIVELL 3
 
-/** Exercici 6 
- * Every / Some: 
- * Usa every i some per a determinar si tots o alguns dels elements 
+/** Exercici 6
+ * Every / Some:
+ * Usa every i some per a determinar si tots o alguns dels elements
  * de l'array [11, 12, 13, 14] són majors que 10, respectivament
  * */
 
@@ -295,47 +319,47 @@ parOImpar(listNumbers);
 
 // NIVELL 1
 
-/** Exercici 1 
- * forEach: 
- * Teniu una array de noms. Utilitza forEach per a imprimir cada 
+/** Exercici 1
+ * forEach:
+ * Teniu una array de noms. Utilitza forEach per a imprimir cada
  * nom a la consola: let noms = ['Anna', 'Bernat', 'Clara'];
  * */
 
-/** Exercici 2 
- * for-of: 
- * Teniu una array de noms. Utilitza un bucle for-of per a imprimir 
+/** Exercici 2
+ * for-of:
+ * Teniu una array de noms. Utilitza un bucle for-of per a imprimir
  * cada nom a la consola: let noms = ['Anna', 'Bernat', 'Clara'];
  * */
 
-/** Exercici 3 
- * filter: 
- * Teniu una array de números. Utilitza filter per a crear una 
- * nova array que només contingui els números parells. 
+/** Exercici 3
+ * filter:
+ * Teniu una array de números. Utilitza filter per a crear una
+ * nova array que només contingui els números parells.
  * let numeros = [1, 2, 3, 4, 5, 6];
  * */
 
 // NIVELL 2
 
-/** Exercici 4 
- * for-in: 
- * Teniu un objecte amb parells clau-valor: 
- * let obj = { nom: Ona, edat: 25, ciutat: 'Barcelona' }; 
- * Utilitza un bucle for-in per a imprimir a la consola cada 
+/** Exercici 4
+ * for-in:
+ * Teniu un objecte amb parells clau-valor:
+ * let obj = { nom: Ona, edat: 25, ciutat: 'Barcelona' };
+ * Utilitza un bucle for-in per a imprimir a la consola cada
  * clau i el seu valor corresponent.
  * */
 
-/** Exercici 5 
- * for-of amb break: 
- * Teniu una array de números. Utilitza un bucle for-of per 
- * a imprimir a la consola els números fins a trobar el número 5, 
+/** Exercici 5
+ * for-of amb break:
+ * Teniu una array de números. Utilitza un bucle for-of per
+ * a imprimir a la consola els números fins a trobar el número 5,
  * llavors atura el bucle: let numeros = [1, 2, 3, 4, 5, 6];
  * */
 
 // NIVELL 3
 
-/** Exercici 6 
- * for-of amb index: 
- * Utilitza un bucle for-of per a imprimir a la consola cada 
+/** Exercici 6
+ * for-of amb index:
+ * Utilitza un bucle for-of per a imprimir a la consola cada
  * element de l'array i la seva posició (index): let noms = ['Anna', 'Bernat', 'Clara']
  * */
 
@@ -343,45 +367,45 @@ parOImpar(listNumbers);
 
 // NIVELL 1
 
-/** Exercici 1 
- * Creació d'una Promesa: 
- * Crea una promesa que es resolgui després de 2 segons i que 
+/** Exercici 1
+ * Creació d'una Promesa:
+ * Crea una promesa que es resolgui després de 2 segons i que
  * retorni la cadena de text 'Hola, món'.
  * */
 
-/** Exercici 2 
- * Utilització d'una Promesa: 
- * Utilitza la promesa creada en l'exercici anterior. 
+/** Exercici 2
+ * Utilització d'una Promesa:
+ * Utilitza la promesa creada en l'exercici anterior.
  * Crea un .then que imprimeixi el resultat a la consola.
  * */
 
-/** Exercici 3 
- * Promesa amb reject: 
- * Crea una promesa que es resolgui després de 2 segons 
- * si l'input és igual a 'Hola', i que la rebutgi si l'input 
+/** Exercici 3
+ * Promesa amb reject:
+ * Crea una promesa que es resolgui després de 2 segons
+ * si l'input és igual a 'Hola', i que la rebutgi si l'input
  * és qualsevol altra cosa.
  * */
 
-/** Exercici 4 
- * Ús de async/await: 
- * Escriu una funció asíncrona que utilitzi la funció await 
- * per a esperar el resultat de la promesa creada a l'exercici 1, 
+/** Exercici 4
+ * Ús de async/await:
+ * Escriu una funció asíncrona que utilitzi la funció await
+ * per a esperar el resultat de la promesa creada a l'exercici 1,
  * i que després imprimeixi aquest resultat a la consola.
  * */
 
 // NIVELL 2
 
-/** Exercici 5 
- * Gestió d'errors amb async/await: 
- * Modifica la funció de l'exercici 4 per a que capturi qualsevol 
+/** Exercici 5
+ * Gestió d'errors amb async/await:
+ * Modifica la funció de l'exercici 4 per a que capturi qualsevol
  * possible error utilitzant un bloc try/catch.
  * */
 
 // NIVELL 3
 
-/** Exercici 6 
- * Promise.all: 
- * Crea dues promeses que es resolguin després de 2 i 3 segons, 
- * respectivament. Utilitza Promise.all per a esperar que ambdues 
+/** Exercici 6
+ * Promise.all:
+ * Crea dues promeses que es resolguin després de 2 i 3 segons,
+ * respectivament. Utilitza Promise.all per a esperar que ambdues
  * promeses es resolguin, i imprimeix els resultats a la consola.
  * */
