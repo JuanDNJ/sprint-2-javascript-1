@@ -283,7 +283,6 @@ const suma = (...nums) => {
   // })
 
   return resultat;
- 
 };
 
 console.log(suma(1, 2, 3, 4, 5, 6));
@@ -296,6 +295,18 @@ console.log(suma(1, 2, 3, 4, 5, 6));
  * que sigui una còpia de 'objecte1' utilitzant l'operador spread.
  * Canvia una propietat de 'objecte2' i comprova que 'objecte1' no ha canviat.
  * */
+
+const objecte1 = {
+  id: 1,
+  title: "Sprint 2 JavaScript 1",
+  description:
+    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, atque!",
+};
+const objecte2 = { ...objecte1 };
+objecte2.title =
+  "Sprint 2 JavaScript 1 Exercici 1.4: Rest & Spread operators, Exercici 3";
+
+console.log(objecte1, objecte2);
 
 /** Exercici 4
  * Rest en Destructuring:
