@@ -315,6 +315,18 @@ console.log(objecte1, objecte2);
  * la resta dels elements a una tercera variable.
  * */
 
+const resDestructuring = [
+  "Buenos días!",
+  [2],
+  [{ id: 1, name: "Juan Valdivia" }],
+  { message: "destructuring i loperador rest" },
+  "Buenas tardes!",
+];
+
+const [bienvenida, nums, ...objs] = resDestructuring;
+
+console.log(bienvenida, nums, objs);
+
 // NIVELL 3
 
 /** Exercici 5
