@@ -270,6 +270,24 @@ console.log(newArray);
  * un nombre indeterminat d'arguments i retornar la seva suma.
  * */
 
+const suma = (...nums) => {
+  let values = Object.values(nums);
+  let resultat = 0;
+
+  for (let i = 0; i < values.length; i++) {
+    resultat += values[i];
+  }
+
+  // values.forEach(res => {
+  //   resultat += res
+  // })
+
+  return resultat;
+ 
+};
+
+console.log(suma(1, 2, 3, 4, 5, 6));
+
 // NIVELL 2
 
 /** Exercici 3
