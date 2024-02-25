@@ -335,6 +335,14 @@ console.log(bienvenida, nums, objs);
  * elements i crida la funció utilitzant l'operador spread amb aquesta array.
  * */
 
+const elementos = (elemento1, elemento2, elemento3) => {
+  return {
+    elemento1, elemento2, elemento3
+  }
+}
+const listaElementos =[{title: "Spread en Funcions"},1,[1,2,3]]
+console.log(elementos(...listaElementos))
+
 /** Exercici 6
  * Fusionant Objectes amb Spread:
  * Crea dos objectes amb propietats diferents. Utilitza l'operador spread
