@@ -386,6 +386,11 @@ console.log("Números parells: ", parells);
  * Utilitza la funció find per a trobar el primer número que és major a 10.
  * */
 
+const ids3 = [1, 10 , 8, 11];
+
+const majorA10 = ids3.find(num => num > 10)
+console.log(majorA10);
+
 /** Exercici 4
  * Reduce: Teniu una array de números [13, 7, 8, 21].
  * Fes servir la funció reduce per a calcular la suma total dels números.
