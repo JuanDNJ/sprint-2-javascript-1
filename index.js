@@ -532,7 +532,7 @@ for (const iterador of entries) {
 
 const promesa = new Promise((resolve) =>
   setTimeout(() => {
-    resolve("Hola mon");
+    return resolve("Hol, món");
   }, 2000)
 );
 /** Exercici 2
@@ -571,9 +571,9 @@ input("Hola Buenos dias")
  * */
 const asyncPromise = async () => {
   const resultat = await promesa;
-  return  resultat
+  return resultat;
 };
-asyncPromise().then(res => console.log("Exercici 4 --> ",  res));
+asyncPromise().then((res) => console.log("Exercici 4 --> ", res));
 
 // NIVELL 2
 
@@ -583,8 +583,15 @@ asyncPromise().then(res => console.log("Exercici 4 --> ",  res));
  * possible error utilitzant un bloc try/catch.
  * */
 
-
-
+const asyncPromiseModificat = async () => {
+  try {
+    const resultat = await asyncPromise();
+    console.error(resultat);
+  } catch (error) {
+    console.error(error);
+  }
+};
+asyncPromiseModificat();
 // NIVELL 3
 
 /** Exercici 6
@@ -593,3 +600,28 @@ asyncPromise().then(res => console.log("Exercici 4 --> ",  res));
  * respectivament. Utilitza Promise.all per a esperar que ambdues
  * promeses es resolguin, i imprimeix els resultats a la consola.
  * */
+
+// Promise.all() https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Promise/all
+
+const promesa1 = new Promise((resolve) =>
+  setTimeout(() => {
+    resolve("promesa1");
+  }, 2000)
+);
+const promesa2 = new Promise((resolve) =>
+  setTimeout(() => {
+    resolve("promesa2");
+  }, 3000)
+);
+
+const promises = Promise;
+
+promises
+  .all([promesa1, promesa2])
+  .then(
+    (prom1) => {
+      console.log(prom1);
+    },
+    (prom2) => console.log(prom2)
+  )
+  .catch((err) => console.error(err));
