@@ -516,9 +516,8 @@ noms = ["Anna", "Bernat", "Clara"];
 const entries = noms.entries(); // https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/entries
 
 for (const iterador of entries) {
-
-  const [next, value] = iterador
-  console.log({next, value });
+  const [next, value] = iterador;
+  console.log({ next, value });
 }
 
 // ---> Exercici 1.7: Promises & Async/Await
@@ -530,6 +529,13 @@ for (const iterador of entries) {
  * Crea una promesa que es resolgui després de 2 segons i que
  * retorni la cadena de text 'Hola, món'.
  * */
+
+const promesa = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve("Hola mon");
+  }, 2000);
+});
+promesa.then((res) => console.log(res));
 
 /** Exercici 2
  * Utilització d'una Promesa:
