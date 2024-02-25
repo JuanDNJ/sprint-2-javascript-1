@@ -413,11 +413,15 @@ console.log("Reduce Exercici 4 -->", sumaIds4);
  * - Calcula la suma dels nombres filtrats i multiplicats per 2.
  * - La funció ha de retornar el resultat de la suma.
  */
-const arrayDonat = [ 1, 3, 7, 10 ,15, 17, 11, 5, 8, 12, 9 ];
+const arrayDonat = [1, 3, 7, 10, 15, 17, 11, 5, 8, 12, 9];
 
-const resultat = () => arrayDonat.filter(num => num >= 10).map(num => num * 2).reduce((a,b) => a + b, 0);
+const resultat = () =>
+  arrayDonat
+    .filter((num) => num >= 10)
+    .map((num) => num * 2)
+    .reduce((a, b) => a + b, 0);
 
-console.log("Exercici 5 --> ", resultat())
+console.log("Exercici 5 --> ", resultat());
 
 // NIVELL 3
 
@@ -426,6 +430,13 @@ console.log("Exercici 5 --> ", resultat())
  * Usa every i some per a determinar si tots o alguns dels elements
  * de l'array [11, 12, 13, 14] són majors que 10, respectivament
  * */
+
+const ids5 = [11, 12, 13, 14];
+
+const totsMajorA10 = ids5.every((num) => num > 10);
+const algunsSonMajors10 = ids5.some((num) => num > 10);
+
+console.log("Every / Some Exercici 6 -->", {totsMajorA10, algunsSonMajors10});
 
 // ---> Exercici 1.6: Array loops
 
