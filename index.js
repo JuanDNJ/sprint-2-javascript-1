@@ -484,7 +484,7 @@ console.log("Exercici 3 filter números parells: ", numerosParells);
 
 let obj = { nom: "Ona", edat: 25, ciutat: "Barcelona" };
 for (const item in obj) {
-  console.log({calu: item, value: obj[item]});
+  console.log({ calu: item, value: obj[item] });
 }
 
 /** Exercici 5
@@ -496,12 +496,11 @@ for (const item in obj) {
 
 let ids1Numeros = [1, 2, 3, 4, 5, 6];
 
-for(const num of ids1Numeros){
-  if(num === 5){
-    console.log("Num 5 trobat")
+for (const num of ids1Numeros) {
+  if (num === 5) {
+    console.log("Num 5 trobat");
     break;
   }
-  
 }
 
 // NIVELL 3
@@ -511,6 +510,16 @@ for(const num of ids1Numeros){
  * Utilitza un bucle for-of per a imprimir a la consola cada
  * element de l'array i la seva posició (index): let noms = ['Anna', 'Bernat', 'Clara']
  * */
+
+noms = ["Anna", "Bernat", "Clara"];
+
+const entries = noms.entries(); // https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/entries
+
+for (const iterador of entries) {
+  // console.log(iterador);
+  const [next, value] = iterador
+  console.log({next, value });
+}
 
 // ---> Exercici 1.7: Promises & Async/Await
 
