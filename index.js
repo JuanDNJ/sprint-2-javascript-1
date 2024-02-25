@@ -482,12 +482,27 @@ console.log("Exercici 3 filter números parells: ", numerosParells);
  * clau i el seu valor corresponent.
  * */
 
+let obj = { nom: "Ona", edat: 25, ciutat: "Barcelona" };
+for (const item in obj) {
+  console.log({calu: item, value: obj[item]});
+}
+
 /** Exercici 5
  * for-of amb break:
  * Teniu una array de números. Utilitza un bucle for-of per
  * a imprimir a la consola els números fins a trobar el número 5,
  * llavors atura el bucle: let numeros = [1, 2, 3, 4, 5, 6];
  * */
+
+let ids1Numeros = [1, 2, 3, 4, 5, 6];
+
+for(const num of ids1Numeros){
+  if(num === 5){
+    console.log("Num 5 trobat")
+    break;
+  }
+  
+}
 
 // NIVELL 3
 
