@@ -391,7 +391,7 @@ console.log("Números parells: ", parells);
 const ids3 = [1, 10, 8, 11];
 
 const majorA10 = ids3.find((num) => num > 10);
-console.log(majorA10);
+console.log("Find Exercici 3 --> ", majorA10);
 
 /** Exercici 4
  * Reduce: Teniu una array de números [13, 7, 8, 21].
@@ -400,7 +400,7 @@ console.log(majorA10);
 
 const ids4 = [13, 7, 8, 21];
 const sumaIds4 = ids4.reduce((a, b) => a + b, 0);
-console.log(sumaIds4);
+console.log("Reduce Exercici 4 -->", sumaIds4);
 
 // NIVELL 2
 
@@ -413,6 +413,11 @@ console.log(sumaIds4);
  * - Calcula la suma dels nombres filtrats i multiplicats per 2.
  * - La funció ha de retornar el resultat de la suma.
  */
+const arrayDonat = [ 1, 3, 7, 10 ,15, 17, 11, 5, 8, 12, 9 ];
+
+const resultat = () => arrayDonat.filter(num => num >= 10).map(num => num * 2).reduce((a,b) => a + b, 0);
+
+console.log("Exercici 5 --> ", resultat())
 
 // NIVELL 3
 
