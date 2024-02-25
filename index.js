@@ -377,6 +377,10 @@ console.log(ids, quadrats);
  * Crea una nova array que només contingui els números parells.
  * */
 
+const ids2 = [4,23,45,65,34,44,22,67,88];
+const parells = ids2.filter(num => num % 2 === 0)
+console.log("Números parells: ", parells);
+
 /** Exercici 3
  * Find: Teniu una array de números [1, 10 , 8, 11].
  * Utilitza la funció find per a trobar el primer número que és major a 10.
