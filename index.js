@@ -436,7 +436,7 @@ const ids5 = [11, 12, 13, 14];
 const totsMajorA10 = ids5.every((num) => num > 10);
 const algunsSonMajors10 = ids5.some((num) => num > 10);
 
-console.log("Every / Some Exercici 6 -->", {totsMajorA10, algunsSonMajors10});
+console.log("Every / Some Exercici 6 -->", { totsMajorA10, algunsSonMajors10 });
 
 // ---> Exercici 1.6: Array loops
 
@@ -448,11 +448,18 @@ console.log("Every / Some Exercici 6 -->", {totsMajorA10, algunsSonMajors10});
  * nom a la consola: let noms = ['Anna', 'Bernat', 'Clara'];
  * */
 
+let noms = ["Anna", "Bernat", "Clara"];
+noms.forEach((nom) => console.log("Nom forEach: ", nom));
+
 /** Exercici 2
  * for-of:
  * Teniu una array de noms. Utilitza un bucle for-of per a imprimir
  * cada nom a la consola: let noms = ['Anna', 'Bernat', 'Clara'];
  * */
+noms = ["Anna", "Bernat", "Clara"];
+for (const nom of noms) {
+  console.log("Nom for-of: ", nom);
+}
 
 /** Exercici 3
  * filter:
@@ -460,6 +467,10 @@ console.log("Every / Some Exercici 6 -->", {totsMajorA10, algunsSonMajors10});
  * nova array que només contingui els números parells.
  * let numeros = [1, 2, 3, 4, 5, 6];
  * */
+
+let idsNumeros = [1, 2, 3, 4, 5, 6];
+let numerosParells = idsNumeros.filter((num) => num % 2 === 0);
+console.log("Exercici 3 filter números parells: ", numerosParells);
 
 // NIVELL 2
 
