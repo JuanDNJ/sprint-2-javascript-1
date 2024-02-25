@@ -530,18 +530,15 @@ for (const iterador of entries) {
  * retorni la cadena de text 'Hola, món'.
  * */
 
-const promesa = new Promise((resolve) => {
-  setTimeout(() => {
-    resolve("Hola mon");
-  }, 2000);
-});
-promesa.then((res) => console.log(res));
-
+const promesa = new Promise((resolve) => setTimeout(() => {
+  resolve("Hola mon");
+}, 2000));
 /** Exercici 2
  * Utilització d'una Promesa:
  * Utilitza la promesa creada en l'exercici anterior.
  * Crea un .then que imprimeixi el resultat a la consola.
  * */
+promesa.then((res) => console.log(res));
 
 /** Exercici 3
  * Promesa amb reject:
