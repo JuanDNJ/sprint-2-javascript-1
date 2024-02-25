@@ -348,6 +348,15 @@ console.log(elementos(...listaElementos))
  * Crea dos objectes amb propietats diferents. Utilitza l'operador spread
  * per a fusionar aquests dos objectes en un de nou.
  * */
+const fruteria = {peras: 5, platanos: 10}
+const panaderia = {baguetts: 2, donuts: 5}
+
+const carrito = {
+  ...fruteria,
+  ...panaderia,
+}
+
+console.log(carrito)
 
 // ---> Exercici 1.5: Array transformations
 
