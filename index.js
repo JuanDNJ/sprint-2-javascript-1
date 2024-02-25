@@ -540,7 +540,7 @@ const promesa = new Promise((resolve) =>
  * Utilitza la promesa creada en l'exercici anterior.
  * Crea un .then que imprimeixi el resultat a la consola.
  * */
-promesa.then((res) => console.log(res));
+promesa.then((res) => console.log("Exercici 1 -->", res));
 
 /** Exercici 3
  * Promesa amb reject:
@@ -556,19 +556,24 @@ const input = (dataString) =>
       resolve("Resolt");
     }, 2000);
   });
-  input("Hola")
+input("Hola")
   .then((res) => console.log(res))
   .catch((err) => console.error(err));
-  input("Hola Buenos dias")
+input("Hola Buenos dias")
   .then((res) => console.log(res))
   .catch((err) => console.error(err));
-  
+
 /** Exercici 4
  * Ús de async/await:
  * Escriu una funció asíncrona que utilitzi la funció await
  * per a esperar el resultat de la promesa creada a l'exercici 1,
  * i que després imprimeixi aquest resultat a la consola.
  * */
+const asyncPromise = async () => {
+  const resultat = await promesa;
+  return  resultat
+};
+asyncPromise().then(res => console.log("Exercici 4 --> ",  res));
 
 // NIVELL 2
 
@@ -577,6 +582,8 @@ const input = (dataString) =>
  * Modifica la funció de l'exercici 4 per a que capturi qualsevol
  * possible error utilitzant un bloc try/catch.
  * */
+
+
 
 // NIVELL 3
 
