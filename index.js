@@ -337,26 +337,28 @@ console.log(bienvenida, nums, objs);
 
 const elementos = (elemento1, elemento2, elemento3) => {
   return {
-    elemento1, elemento2, elemento3
-  }
-}
-const listaElementos =[{title: "Spread en Funcions"},1,[1,2,3]]
-console.log(elementos(...listaElementos))
+    elemento1,
+    elemento2,
+    elemento3,
+  };
+};
+const listaElementos = [{ title: "Spread en Funcions" }, 1, [1, 2, 3]];
+console.log(elementos(...listaElementos));
 
 /** Exercici 6
  * Fusionant Objectes amb Spread:
  * Crea dos objectes amb propietats diferents. Utilitza l'operador spread
  * per a fusionar aquests dos objectes en un de nou.
  * */
-const fruteria = {peras: 5, platanos: 10}
-const panaderia = {baguetts: 2, donuts: 5}
+const fruteria = { peras: 5, platanos: 10 };
+const panaderia = { baguetts: 2, donuts: 5 };
 
 const carrito = {
   ...fruteria,
   ...panaderia,
-}
+};
 
-console.log(carrito)
+console.log(carrito);
 
 // ---> Exercici 1.5: Array transformations
 
@@ -367,8 +369,8 @@ console.log(carrito)
  * Crea una nova array que contingui el quadrat de cada número.
  * */
 
-const ids = [4,23,45,65,34];
-const quadrats = ids.map((num) => Math.floor(Math.sqrt(num)))
+const ids = [4, 23, 45, 65, 34];
+const quadrats = ids.map((num) => Math.floor(Math.sqrt(num)));
 
 console.log(ids, quadrats);
 
@@ -377,8 +379,8 @@ console.log(ids, quadrats);
  * Crea una nova array que només contingui els números parells.
  * */
 
-const ids2 = [4,23,45,65,34,44,22,67,88];
-const parells = ids2.filter(num => num % 2 === 0)
+const ids2 = [4, 23, 45, 65, 34, 44, 22, 67, 88];
+const parells = ids2.filter((num) => num % 2 === 0);
 console.log("Números parells: ", parells);
 
 /** Exercici 3
@@ -386,15 +388,19 @@ console.log("Números parells: ", parells);
  * Utilitza la funció find per a trobar el primer número que és major a 10.
  * */
 
-const ids3 = [1, 10 , 8, 11];
+const ids3 = [1, 10, 8, 11];
 
-const majorA10 = ids3.find(num => num > 10)
+const majorA10 = ids3.find((num) => num > 10);
 console.log(majorA10);
 
 /** Exercici 4
  * Reduce: Teniu una array de números [13, 7, 8, 21].
  * Fes servir la funció reduce per a calcular la suma total dels números.
  * */
+
+const ids4 = [13, 7, 8, 21];
+const sumaIds4 = ids4.reduce((a, b) => a + b, 0);
+console.log(sumaIds4);
 
 // NIVELL 2
 
