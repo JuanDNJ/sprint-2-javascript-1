@@ -530,9 +530,11 @@ for (const iterador of entries) {
  * retorni la cadena de text 'Hola, món'.
  * */
 
-const promesa = new Promise((resolve) => setTimeout(() => {
-  resolve("Hola mon");
-}, 2000));
+const promesa = new Promise((resolve) =>
+  setTimeout(() => {
+    resolve("Hola mon");
+  }, 2000)
+);
 /** Exercici 2
  * Utilització d'una Promesa:
  * Utilitza la promesa creada en l'exercici anterior.
@@ -547,6 +549,20 @@ promesa.then((res) => console.log(res));
  * és qualsevol altra cosa.
  * */
 
+const input = (dataString) =>
+  new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (dataString === "Hola") reject("rebutg");
+      resolve("Resolt");
+    }, 2000);
+  });
+  input("Hola")
+  .then((res) => console.log(res))
+  .catch((err) => console.error(err));
+  input("Hola Buenos dias")
+  .then((res) => console.log(res))
+  .catch((err) => console.error(err));
+  
 /** Exercici 4
  * Ús de async/await:
  * Escriu una funció asíncrona que utilitzi la funció await
