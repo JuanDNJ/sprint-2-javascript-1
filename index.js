@@ -367,6 +367,11 @@ console.log(carrito)
  * Crea una nova array que contingui el quadrat de cada número.
  * */
 
+const ids = [4,23,45,65,34];
+const quadrats = ids.map((num) => Math.floor(Math.sqrt(num)))
+
+console.log(ids, quadrats);
+
 /** Exercici 2
  * Filter: Teniu una array de números [1, 2, 3, 4].
  * Crea una nova array que només contingui els números parells.
