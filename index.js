@@ -516,7 +516,7 @@ noms = ["Anna", "Bernat", "Clara"];
 const entries = noms.entries(); // https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/entries
 
 for (const iterador of entries) {
-  // console.log(iterador);
+
   const [next, value] = iterador
   console.log({next, value });
 }
